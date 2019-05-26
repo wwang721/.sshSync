@@ -1,9 +1,8 @@
-Welcome!
---------------------------
+# Welcome!
+
 This is is a small shell-script program to synchronize files througn SSH.
 
-First
-------------------
+## First
 You have to pull the `.sshSync` fold into the root directory `~`.
 
 You can edit the 3 files in the fold:
@@ -19,8 +18,8 @@ echo ~/XXX/XXX > ~/.sshSync/targetDir.txt
 ```
 to initialize the `targetDir.txt` file in case the `cd: no such file or directory` error problems.
 
-Second
-------------------
+## Second
+
 Add the following 3 lines into the `~/.bashrc` or `~/.bash_profile` file:
 
 ```sh
@@ -32,8 +31,8 @@ then, input `source ~/.bashrc` or `source ~/.bash_profile` in the Terminal.
 
 After that, you can just use Command `ssync` and `ssyncend` in the Terminal to synchronize files through SSH.
 
-Thanks!
-------------------
+## Thanks!
+
 >2019.5.26 Shanghai
 >
 >WW
