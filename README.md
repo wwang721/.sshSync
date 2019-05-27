@@ -23,7 +23,7 @@ echo ~/XXX/XXX > ~/.sshSync/targetDir.txt
 to initialize the `targetDir.txt` file in case the `cd: no such file or directory` error problems.
 
 ## Second
-Add the following 5 lines into the `~/.bashrc` or `~/.bash_profile` file:
+Add the following codes into the `~/.bashrc` or `~/.bash_profile` file:
 
 ```sh
 # SSH file-Sync
@@ -54,7 +54,7 @@ alias ssyncend='~/.sshSync/syncEnd.sh'	#sync end
 alias ssync-smi='echo ----------------------------------------------------------------------------- && echo "*** SYNC-INFORMATION ***" && echo ----------------------------------------------------------------------------- && echo -n "SSH:                  " && cat ~/.sshSync/ssh.txt && echo -n "Sync-Time Interval:   " && echo -n `cat ~/.sshSync/syncTime.txt` && echo s && echo -n "Target Path:          " && cat ~/.sshSync/targetDir.txt && echo && echo ============================================================================= && echo "  UID   PID  PPID   C STIME   TTY           TIME CMD" && echo ============================================================================= && ps -ef|grep scp.sh|grep -v grep && echo ============================================================================='	#States
 alias ssync-pid='echo -n PID:" "[  && echo -n `cat ~/.sshSync/.config/scpPID.txt` && echo ]'	#PID
 ```
->Note: you can adjust the blank space of the `echo "..."` in the 4th line to accommodate your system. (MacOS or Linux)
+>Note: you can adjust the blank space of the `echo "..."` in the 26th line to accommodate your system. (MacOS or Linux)
 
 then, input `source ~/.bashrc` or `source ~/.bash_profile` in the Terminal.
 
@@ -62,6 +62,6 @@ After that, you can just use Commands `ssync-set-ssh`,`ssync-set-time` and `ssyn
 
 ## Thanks!
 
->2019.5.26 Shanghai
+>2019.5.27 Shanghai
 >
 >WW
