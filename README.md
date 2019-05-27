@@ -1,5 +1,7 @@
 # Welcome!
 
+[toc]
+
 This is is a small shell-script program to synchronize files througn SSH.
 
 >Note: before using this small program, you have to use: 
@@ -20,7 +22,7 @@ Note: sometimes you need to use:
 ``` sh
 echo ~/XXX/XXX > ~/.sshSync/targetDir.txt
 ```
-to initialize the `targetDir.txt` file in case the `cd: no such file or directory` error problems.
+to initialize the `targetDir.txt` file in case the `cd: no such file or directory` error problems ( `~/XXX/XXX` must be absolute path starting from the root directory ).
 
 ## Second
 Add the following codes into the `~/.bashrc` or `~/.bash_profile` file:
