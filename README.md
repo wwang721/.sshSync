@@ -32,6 +32,8 @@ alias ssyncend='~/.sshSync/syncend.sh'	#sync end
 alias ssync-smi='echo "  UID   PID  PPID   C STIME   TTY           TIME CMD" && echo ============================================================================= && ps -ef|grep scp.sh|grep -v grep'	#States
 alias ssync-pid='echo -n PID:" "[  && echo -n `cat ~/.sshSync/.config/scpPID.txt` && echo ]'	#PID
 ```
+>Note: you can adjust the blank space of the `echo "..."` in the 4th line to accommodate your system. (MacOS or Linux)
+
 then, input `source ~/.bashrc` or `source ~/.bash_profile` in the Terminal.
 
 After that, you can just use Commands `ssync`, `ssyncend`, `ssync-smi` and `ssync-pid` in the Terminal to synchronize files through SSH.
