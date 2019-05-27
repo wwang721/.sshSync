@@ -29,12 +29,12 @@ Add the following 5 lines into the `~/.bashrc` or `~/.bash_profile` file:
 #SSH file-sync
 alias ssync='~/.sshSync/sync.sh'	#sync begin
 alias ssyncend='~/.sshSync/syncend.sh'	#sync end
-alias ssync_smi='echo "  UID   PID  PPID   C STIME   TTY           TIME CMD" && echo ============================================================================= && ps -ef|grep scp.sh|grep -v grep'	#States
-alias ssync_pid='echo -n PID:" "[  && echo -n `cat ~/.sshSync/.config/scpPID.txt` && echo ]'	#PID
+alias ssync-smi='echo "  UID   PID  PPID   C STIME   TTY           TIME CMD" && echo ============================================================================= && ps -ef|grep scp.sh|grep -v grep'	#States
+alias ssync-pid='echo -n PID:" "[  && echo -n `cat ~/.sshSync/.config/scpPID.txt` && echo ]'	#PID
 ```
 then, input `source ~/.bashrc` or `source ~/.bash_profile` in the Terminal.
 
-After that, you can just use Commands `ssync`, `ssyncend`, `ssync_smi` and `ssync_pid` in the Terminal to synchronize files through SSH.
+After that, you can just use Commands `ssync`, `ssyncend`, `ssync-smi` and `ssync-pid` in the Terminal to synchronize files through SSH.
 
 ## Thanks!
 
