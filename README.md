@@ -26,17 +26,39 @@ to initialize the `targetDir.txt` file in case the `cd: no such file or director
 Add the following 5 lines into the `~/.bashrc` or `~/.bash_profile` file:
 
 ```sh
-#SSH file-sync
+# SSH file-Sync
+#setting
+ssyncsetssh()
+{
+	echo $1 > ~/.sshSync/ssh.txt;
+	echo Set SSH as: $1;
+}
+alias ssync-set-ssh=ssyncsetssh
+
+ssyncsettime()
+{
+	echo $1 > ~/.sshSync/syncTime.txt;
+	echo Set sync-time interval as: $1s;
+}
+alias ssync-set-time=ssyncsettime
+
+ssyncsettarget()
+{
+	echo $1 > ~/.sshSync/targetDir.txt;
+	echo Set target as: $1;
+}
+alias ssync-set-target=ssyncsettarget
+
 alias ssync='~/.sshSync/sync.sh'	#sync begin
-alias ssyncend='~/.sshSync/syncend.sh'	#sync end
-alias ssync-smi='echo "  UID   PID  PPID   C STIME   TTY           TIME CMD" && echo ============================================================================= && ps -ef|grep scp.sh|grep -v grep'	#States
+alias ssyncend='~/.sshSync/syncEnd.sh'	#sync end
+alias ssync-smi='echo ----------------------------------------------------------------------------- && echo "*** SYNC-INFORMATION ***" && echo ----------------------------------------------------------------------------- && echo -n "SSH:                  " && cat ~/.sshSync/ssh.txt && echo -n "Sync-Time Interval:   " && echo -n `cat ~/.sshSync/syncTime.txt` && echo s && echo -n "Target Path:          " && cat ~/.sshSync/targetDir.txt && echo && echo ============================================================================= && echo "  UID   PID  PPID   C STIME   TTY           TIME CMD" && echo ============================================================================= && ps -ef|grep scp.sh|grep -v grep && echo ============================================================================='	#States
 alias ssync-pid='echo -n PID:" "[  && echo -n `cat ~/.sshSync/.config/scpPID.txt` && echo ]'	#PID
 ```
 >Note: you can adjust the blank space of the `echo "..."` in the 4th line to accommodate your system. (MacOS or Linux)
 
 then, input `source ~/.bashrc` or `source ~/.bash_profile` in the Terminal.
 
-After that, you can just use Commands `ssync`, `ssyncend`, `ssync-smi` and `ssync-pid` in the Terminal to synchronize files through SSH.
+After that, you can just use Commands `ssync-set-ssh`,`ssync-set-time` and `ssync-set-target` to initialize, and use Commands `ssync`, `ssyncend`, `ssync-smi` and `ssync-pid` in the Terminal to synchronize files through SSH.
 
 ## Thanks!
 
