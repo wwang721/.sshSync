@@ -1,6 +1,10 @@
 # Welcome!
+![build](https://img.shields.io/badge/build-succedded-ligtgreen.svg)
 
-[toc]
+### Build Status
+Project|Build Status
+---|---
+.sshSync|![](https://img.shields.io/badge/Shell-unknown-blue.svg)
 
 This is is a small shell-script program to synchronize files througn SSH.
 
