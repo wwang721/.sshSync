@@ -1,5 +1,5 @@
 # Welcome!
-![build](https://img.shields.io/badge/build-succedded-lightgreen.svg)
+![build](https://img.shields.io/badge/build-succedded-brightgreen.svg)
 
 ### Build Status
 Project|Build Status
